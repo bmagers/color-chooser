@@ -1,10 +1,12 @@
 import React from 'react';
+import colors from './colors';
 
-const SwatchLarge = () => {
+const SwatchLarge = props => {
+  const hexColor = "#".concat(colors[props.color]);
   return (
     <div className="swatchLargeContainer">
-      <div className="swatchLarge" />
-      <span className="swatchLargeLabel">#cffff1</span>
+      <div className="swatchLarge" style={{backgroundColor: hexColor}} />
+      <span className="swatchLargeLabel">{hexColor}</span>
     </div>
   );
 }

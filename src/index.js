@@ -5,7 +5,6 @@ import Header from './header';
 import Sidebar from './sidebar';
 import ListView from './listView';
 import DetailView from './detailView';
-import colors from './colors';
 import './style.css';
 
 const App = () => {
@@ -14,8 +13,9 @@ const App = () => {
       <Header />
       <Sidebar />
       <Switch>
-        <Route exact path="/" component={ListView}></Route>
-        <Route path="/:color" component={DetailView}></Route>
+        <Route exact path="/" component={ListView} />
+        <Route path="/listView/:color" component={ListView} />
+        <Route path="/detailView/:color" component={DetailView} />
       </Switch>
     </div>
   );
