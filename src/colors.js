@@ -24,15 +24,13 @@ let colors = baseColorsRgb.map(function(current, index, array) {
   let hexColors = [];
   for (let gradation = 0; gradation < gradations; gradation++) {
     let hexColor = 
-      toHex(current[0] + diff[0] * gradation) +
-      toHex(current[1] + diff[1] * gradation) + 
-      toHex(current[2] + diff[2] * gradation);
+      toHex(parseInt(current[0]) + parseInt(diff[0]) * gradation) +
+      toHex(parseInt(current[1]) + parseInt(diff[1]) * gradation) + 
+      toHex(parseInt(current[2]) + parseInt(diff[2]) * gradation);
     hexColors.push(hexColor);
   }
   return hexColors;
 
 }).flat();
-
-console.log(colors);
 
 export default colors;

@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
+
 body {
   margin: 0;
   font: 16px 'Source Serif Pro';
   color: #666666;
+}
+
+a:link, a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+
+button {
+  width: 160px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  font: bold 14px 'Source Serif Pro';
 }
 
 .container {
@@ -65,11 +80,6 @@ body {
 
 .sidebar li {
   line-height: 180%;
-}
-
-a:link, a:visited {
-  color: #666666;
-  text-decoration: none;
 }
 
 /* content area */
@@ -160,15 +170,3 @@ a:link, a:visited {
   grid-column-gap: 18px;
   grid-row-gap: 10px;
 }
-
-/* misc */
-
-button {
-  width: 160px;
-  height: 40px;
-  border: 1px solid gray;
-  border-radius: 6px;
-  font: bold 14px 'Source Serif Pro';
-}
-
-@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
