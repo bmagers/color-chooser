@@ -23,7 +23,6 @@ const DetailView = props => {
       <SwatchLarge color={color} />
       <div className="swatchSmallGrid">
         {smallSwatches}
-        <h1>{props.match.params.color}</h1>
       </div>
     </div>
   );

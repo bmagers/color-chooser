@@ -10,16 +10,45 @@ body {
   grid-template-rows: 60px 1fr 1fr;
   grid-template-columns: 200px 800px 1fr;
   grid-template-areas:
-    "header header ."
-    "sidebar content .";
+    "header header headerExtended"
+    "sidebar content ."
+    "sidebar . .";
 }
+
+/* header */
 
 .header {
   grid-area: header;
   background-color: #303030;
   color: white;
-  padding: 0 18px;
+  padding-left: 18px;
 }
+
+.logo {
+  float: left;
+}
+
+.search {
+  float: right;
+  width: 170px;
+  height: 34px;
+  border: 0;
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 2px 10px;
+  font-size: 14px;
+}
+
+.search::placeholder {
+  font-size: 14px;
+}
+
+.headerExtended {
+  grid-area: headerExtended;
+  background-color: #303030;
+}
+
+/* sidebar */
 
 .sidebar {
   grid-area: sidebar;
@@ -38,13 +67,22 @@ body {
   line-height: 180%;
 }
 
+a:link, a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+
+/* content area */
+
 .content {
   grid-area: content;
   padding: 50px 18px 0 18px;
 }
 
+/* medium swatches (ListView) */
+
 .swatchMediumContainer {
-  width: 150px;
+  width: 180px;
   height: 175px;
   border: 1px solid white;
   border-radius: 6px;
@@ -52,11 +90,10 @@ body {
 }
 
 .swatchMedium {
-  width: 150px;
+  width: 180px;
   height: 140px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  background-color: #237844;
 }
 
 .swatchMediumLabel {
@@ -71,6 +108,8 @@ body {
   grid-column-gap: 18px;
   grid-row-gap: 25px;
 }
+
+/* large swatch (DetailView) */
 
 .swatchLargeContainer {
   width: 780px;
@@ -93,8 +132,7 @@ body {
   font-size: 24px;
 }
 
-
-
+/* small swatches (DetailView) */
 
 .swatchSmallContainer {
   width: 140px;
@@ -123,36 +161,14 @@ body {
   grid-row-gap: 10px;
 }
 
+/* misc */
+
 button {
   width: 160px;
   height: 40px;
   border: 1px solid gray;
   border-radius: 6px;
   font: bold 14px 'Source Serif Pro';
-}
-
-.logo {
-  float: left;
-}
-
-.search {
-  float: right;
-  width: 170px;
-  height: 34px;
-  border: 0;
-  border-radius: 6px;
-  margin: 10px;
-  padding: 2px 10px;
-  font-size: 14px;
-}
-
-.search::placeholder {
-  font-size: 14px;
-}
-
-a:link, a:visited {
-  color: #666666;
-  text-decoration: none;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700');
