@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './header';
+import Sidebar from './sidebar';
+import ListView from './listView';
+import DetailView from './detailView';
+import colors from './colors';
+import './style.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => {
+  return (
+    <div className="container">
+      <Header />
+      <Sidebar />
+      <Switch>
+        <Route exact path="/" component={ListView}></Route>
+        <Route path="/:color" component={DetailView}></Route>
+      </Switch>
+    </div>
+  );
+}
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.querySelector('#root'));
