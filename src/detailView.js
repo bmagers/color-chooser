@@ -4,7 +4,9 @@ import SwatchSmall from './swatchSmall';
 import colors from './colors';
 
 const DetailView = props => {
-  const { color } = props.match.params;
+  const { hexColor } = props.match.params;
+  const color = colors.indexOf(hexColor);
+  console.log(document.referrer);
 
   const smallSwatchesArray = [];
   for (let i = parseInt(color) - 2; i < parseInt(color) + 3; i++) {
@@ -18,6 +20,11 @@ const DetailView = props => {
   }
   const smallSwatches = smallSwatchesArray.map((color, key) => <SwatchSmall color={color} key={key} />);
 
+  const clearClick = event => {
+    event.preventDefault();
+    window.history.go(-1);
+  }
+
   return (
     <div className="content">
       <SwatchLarge color={color} />
@@ -25,9 +32,8 @@ const DetailView = props => {
         {smallSwatches}
       </div>
       <div id="clearButton">
-        <button id="clear">Clear</button>
+        <button id="clear" onClick={clearClick}>Clear</button>
       </div>
-      
     </div>
   );
 

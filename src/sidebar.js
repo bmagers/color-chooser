@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar = props => {
+  
   return (
     <div className="sidebar">
-      <button>Random Color</button>
+      <button onClick={props.handleClick}>Random Color</button>
       <ul>
         <li><Link to="/listView/0">Red</Link></li>
         <li><Link to="/listView/13">Orange</Link></li>

@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import colors from './colors';
 
 const SwatchMedium = props => {
-  const hexColor = "#".concat(colors[props.color]);
-  const url = "/detailView/" + props.color;
+  const { colors, color } = props;
+  const hexColor = colors[color];
+  const hexCode = "#".concat(hexColor);
+  const url = "/detailView/" + hexColor;
   return (
     <Link to={url}>
       <div className="swatchMediumContainer">
-        <div className="swatchMedium" style={{backgroundColor: hexColor}} />
-        <span className="swatchMediumLabel">{hexColor}</span>
+        <div className="swatchMedium" style={{backgroundColor: hexCode}} />
+        <span className="swatchMediumLabel">{hexCode}</span>
       </div>
     </Link>
   );

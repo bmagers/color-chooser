@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SwatchMedium from './swatchMedium';
-import colors from './colors';
 
 const ListView = props => {
 
   let { color = 0 } = props.match.params;
-
+  let { colors } = props;
   let pagination = [];
   for (let i = 0; i <= Math.ceil(colors.length / 12); i++) {
     let url="/listView/" + i * 12;
@@ -24,7 +23,7 @@ const ListView = props => {
       mediumSwatchesArray.push(i);
     }
   }
-  const mediumSwatches = mediumSwatchesArray.map((color, key) => <SwatchMedium color={color} key={key} />);
+  const mediumSwatches = mediumSwatchesArray.map((swatchColor, key) => <SwatchMedium colors={colors} color={swatchColor} key={key} parent={color} />);
 
   return (
     <div className="content">
