@@ -10,7 +10,8 @@ import './style.css';
 const App = () => {
   return (
     <div className="container">
-      <Header /><div className="headerExtended" />
+      <Header />
+      <div className="headerExtended" />
       <Sidebar />
       <Switch>
         <Route exact path="/" component={ListView} />

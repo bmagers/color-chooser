@@ -24,6 +24,10 @@ const DetailView = props => {
       <div className="swatchSmallGrid">
         {smallSwatches}
       </div>
+      <div id="clearButton">
+        <button id="clear">Clear</button>
+      </div>
+      
     </div>
   );
 

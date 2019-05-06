@@ -1,9 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SwatchMedium from './swatchMedium';
 import colors from './colors';
 
 const ListView = props => {
-  const { color } = props.match.params;
+
+  let { color = 0 } = props.match.params;
+
+  let pagination = [];
+  for (let i = 0; i <= Math.ceil(colors.length / 12); i++) {
+    let url="/listView/" + i * 12;
+    let pageClass = (parseInt(color) === parseInt(i * 12)) ? "pageNumber selected" : "pageNumber";
+    pagination.push(<Link className={pageClass} to={url} key={i + 1}>&nbsp;{i + 1}&nbsp;</Link>);
+  }
 
   const mediumSwatchesArray = [];
   for (let i = parseInt(color) - 6; i < parseInt(color) + 6; i++) {
@@ -21,6 +30,9 @@ const ListView = props => {
     <div className="content">
       <div className="swatchMediumGrid">
         {mediumSwatches}
+      </div>
+      <div id="pagination">
+        {pagination}
       </div>
     </div>
   );

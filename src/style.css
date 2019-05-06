@@ -30,6 +30,22 @@ button {
     "sidebar . .";
 }
 
+#pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 26px 0 0 9px;
+}
+
+.pageNumber {
+  margin: 0 5px;
+}
+
+.selected:link, .selected:visited {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 /* header */
 
 .header {
@@ -40,6 +56,13 @@ button {
 }
 
 .logo {
+  float: left;
+}
+
+.logo {
+  width: 164px;
+  height: 42px;
+  padding-top: 10px;
   float: left;
 }
 
@@ -92,15 +115,14 @@ button {
 /* medium swatches (ListView) */
 
 .swatchMediumContainer {
-  width: 180px;
+  width: 174px;
   height: 175px;
-  border: 1px solid white;
   border-radius: 6px;
   box-shadow: 0 0 2px 1px #cccccc;
 }
 
 .swatchMedium {
-  width: 180px;
+  width: 174px;
   height: 140px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -115,7 +137,7 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 18px;
+  grid-column-gap: 28px;
   grid-row-gap: 25px;
 }
 
@@ -137,24 +159,23 @@ button {
 }
 
 .swatchLargeLabel {
-  margin: 18px;
+  margin: 0 30px;
   line-height: 340%;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 /* small swatches (DetailView) */
 
 .swatchSmallContainer {
-  width: 140px;
-  height: 105px;
-  border: 1px solid white;
+  width: 137px;
+  height: 120px;
   border-radius: 6px;
   box-shadow: 0 0 2px 1px #cccccc;
 }
 
 .swatchSmall {
-  width: 140px;
-  height: 70px;
+  width: 137px;
+  height: 85px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
@@ -167,6 +188,13 @@ button {
 .swatchSmallGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 18px;
-  grid-row-gap: 10px;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+}
+
+#clearButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 26px 0 0 9px;
 }
