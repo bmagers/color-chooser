@@ -5,7 +5,7 @@ const SwatchMedium = props => {
   const { colors, color } = props;
   const hexColor = colors[color];
   const hexCode = "#".concat(hexColor);
-  const url = "../detailView/" + hexColor;
+  const url = "/detailView/" + hexColor;
   return (
     <Link to={url}>
       <div className="swatchMediumContainer">

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import Header from './header';
 import Sidebar from './sidebar';
 import ListView from './listView';
@@ -60,14 +60,14 @@ class App extends React.Component {
         <Switch>
           <Route 
             exact
-            path={process.env.PUBLIC_URL + '/'} 
+            path='/' 
             render={props => <ListView {...props} colors={this.state.useColors} />}
           />
           <Route 
-            path={process.env.PUBLIC_URL + '/listView/:color'} 
+            path='/listView/:color' 
             render={props => <ListView {...props} colors={this.state.useColors} />}
           />
-          <Route path={process.env.PUBLIC_URL + '/detailView/:hexColor'} component={DetailView} />
+          <Route path='/detailView/:hexColor' component={DetailView} />
         </Switch>
       </div>
     );
@@ -75,4 +75,4 @@ class App extends React.Component {
 
 }
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.querySelector('#root'));
+ReactDOM.render(<HashRouter basename='/'><App /></HashRouter>, document.querySelector('#root'));

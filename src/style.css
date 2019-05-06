@@ -32,10 +32,37 @@ button {
     "sidebar . .";
   }
 
+  .logo {
+    width: 164px;
+    height: 42px;
+    padding-top: 10px;
+    float: left;
+  }  
+
+  .search {
+    float: right;
+    width: 170px;
+    height: 34px;
+    border: 0;
+    border-radius: 6px;
+    margin: 10px 20px;
+    padding: 2px 10px;
+    font-size: 14px;
+  }  
+
+  .swatchMediumGrid {
+    grid-column-gap: 28px;
+    grid-row-gap: 25px;
+  }
+
   .swatchMediumLabel {
     margin: 18px;
     line-height: 240%;
   }  
+
+  .swatchSmallGrid {
+    grid-column-gap: 24px;
+  }
 
   .swatchSmallLabel {
     margin: 18px;
@@ -50,16 +77,43 @@ button {
   height: 100vh;
   display: grid;
   grid-template-rows: minmax(30px, 60px) 1fr 1fr;
-  grid-template-columns: minmax(400px, 768px);
+  grid-template-columns: minmax(300px, 768px);
   grid-template-areas:
     "header"
     "content"
     "sidebar";
   }
 
+  .logo {
+    width: 82px;
+    height: 24px;
+    padding-top: 5px;
+    float: left;
+  }  
+
+  .search {
+    float: right;
+    width: 100px;
+    height: 24px;
+    border: 0;
+    border-radius: 6px;
+    margin: 5px 20px;
+    padding: 2px 10px;
+    font-size: 14px;
+  }
+  
+  .swatchMediumGrid {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+  }
+
   .swatchMediumLabel {
     margin: 6px;
     line-height: 240%;
+  }
+  
+  .swatchSmallGrid {
+    grid-column-gap: 8px;
   }
   
   .swatchSmallLabel {
@@ -92,28 +146,6 @@ button {
   background-color: #303030;
   color: white;
   padding-left: 18px;
-}
-
-.logo {
-  float: left;
-}
-
-.logo {
-  width: 164px;
-  height: 42px;
-  padding-top: 10px;
-  float: left;
-}
-
-.search {
-  float: right;
-  width: 170px;
-  height: 34px;
-  border: 0;
-  border-radius: 6px;
-  margin: 10px 20px;
-  padding: 2px 10px;
-  font-size: 14px;
 }
 
 .search::placeholder {
@@ -171,14 +203,12 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 28px;
-  grid-row-gap: 25px;
 }
 
 /* large swatch (DetailView) */
 
 .swatchLargeContainer {
-  width: minmax(390px, 780px);
+  width: minmax(450px, 780px);
   height: 475px;
   margin-bottom: 20px;
   border: 1px solid #666666;
@@ -186,7 +216,7 @@ button {
 }
 
 .swatchLarge {
-  width: minmax(390px, 780px);
+  width: minmax(450px, 780px);
   height: 400px;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
@@ -201,14 +231,14 @@ button {
 /* small swatches (DetailView) */
 
 .swatchSmallContainer {
-  width: minmax(48px, 137px);
+  width: minmax(40px, 137px);
   height: 120px;
   border-radius: 6px;
   box-shadow: 0 0 2px 1px #cccccc;
 }
 
 .swatchSmall {
-  width: minmax(48px, 137px);
+  width: minmax(40px, 137px);
   height: 85px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -217,7 +247,6 @@ button {
 .swatchSmallGrid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 24px;
   grid-row-gap: 24px;
 }
 
