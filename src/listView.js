@@ -30,7 +30,7 @@ const ListView = props => {
       <div className="swatchMediumGrid">
         {mediumSwatches}
       </div>
-      <div id="pagination">
+      <div className="pagination">
         {pagination}
       </div>
     </div>

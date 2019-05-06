@@ -19,18 +19,57 @@ button {
   font: bold 14px 'Source Serif Pro';
 }
 
-.container {
+@media (min-width: 768px) {
+
+  .container {
   height: 100vh;
   display: grid;
-  grid-template-rows: 60px 1fr 1fr;
-  grid-template-columns: 200px 800px 1fr;
+  grid-template-rows: minmax(30px, 60px) 1fr 1fr;
+  grid-template-columns: 200px minmax(400px, 800px) 1fr;
   grid-template-areas:
     "header header headerExtended"
     "sidebar content ."
     "sidebar . .";
+  }
+
+  .swatchMediumLabel {
+    margin: 18px;
+    line-height: 240%;
+  }  
+
+  .swatchSmallLabel {
+    margin: 18px;
+    line-height: 240%;
+  }
+
 }
 
-#pagination {
+@media (max-width: 768px) {
+
+  .container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: minmax(30px, 60px) 1fr 1fr;
+  grid-template-columns: minmax(400px, 768px);
+  grid-template-areas:
+    "header"
+    "content"
+    "sidebar";
+  }
+
+  .swatchMediumLabel {
+    margin: 6px;
+    line-height: 240%;
+  }
+  
+  .swatchSmallLabel {
+    margin: 6px;
+    line-height: 240%;
+  }
+
+}
+
+.pagination {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -72,7 +111,7 @@ button {
   height: 34px;
   border: 0;
   border-radius: 6px;
-  margin: 10px 0;
+  margin: 10px 20px;
   padding: 2px 10px;
   font-size: 14px;
 }
@@ -115,22 +154,17 @@ button {
 /* medium swatches (ListView) */
 
 .swatchMediumContainer {
-  width: 174px;
-  height: 175px;
+  width: minmax(87px, 174px);
+  height: minmax(87px, 174px);
   border-radius: 6px;
   box-shadow: 0 0 2px 1px #cccccc;
 }
 
 .swatchMedium {
-  width: 174px;
+  width: minmax(87px, 174px);
   height: 140px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-}
-
-.swatchMediumLabel {
-  margin: 18px;
-  line-height: 240%;
 }
 
 .swatchMediumGrid {
@@ -144,7 +178,7 @@ button {
 /* large swatch (DetailView) */
 
 .swatchLargeContainer {
-  width: 780px;
+  width: minmax(390px, 780px);
   height: 475px;
   margin-bottom: 20px;
   border: 1px solid #666666;
@@ -152,7 +186,7 @@ button {
 }
 
 .swatchLarge {
-  width: 780px;
+  width: minmax(390px, 780px);
   height: 400px;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
@@ -167,22 +201,17 @@ button {
 /* small swatches (DetailView) */
 
 .swatchSmallContainer {
-  width: 137px;
+  width: minmax(48px, 137px);
   height: 120px;
   border-radius: 6px;
   box-shadow: 0 0 2px 1px #cccccc;
 }
 
 .swatchSmall {
-  width: 137px;
+  width: minmax(48px, 137px);
   height: 85px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-}
-
-.swatchSmallLabel {
-  margin: 18px;
-  line-height: 240%;
 }
 
 .swatchSmallGrid {
@@ -192,7 +221,7 @@ button {
   grid-row-gap: 24px;
 }
 
-#clearButton {
+.clearButton {
   width: 100%;
   display: flex;
   justify-content: center;

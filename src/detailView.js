@@ -6,7 +6,6 @@ import colors from './colors';
 const DetailView = props => {
   const { hexColor } = props.match.params;
   const color = colors.indexOf(hexColor);
-  console.log(document.referrer);
 
   const smallSwatchesArray = [];
   for (let i = parseInt(color) - 2; i < parseInt(color) + 3; i++) {
@@ -31,7 +30,7 @@ const DetailView = props => {
       <div className="swatchSmallGrid">
         {smallSwatches}
       </div>
-      <div id="clearButton">
+      <div className="clearButton">
         <button id="clear" onClick={clearClick}>Clear</button>
       </div>
     </div>
