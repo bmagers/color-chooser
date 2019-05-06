@@ -8,7 +8,7 @@ const ListView = props => {
   let { colors } = props;
   let pagination = [];
   for (let i = 0; i <= Math.ceil(colors.length / 12); i++) {
-    let url="/listView/" + i * 12;
+    let url="../listView/" + i * 12;
     let pageClass = (parseInt(color) === parseInt(i * 12)) ? "pageNumber selected" : "pageNumber";
     pagination.push(<Link className={pageClass} to={url} key={i + 1}>&nbsp;{i + 1}&nbsp;</Link>);
   }

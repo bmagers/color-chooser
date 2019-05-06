@@ -60,14 +60,14 @@ class App extends React.Component {
         <Switch>
           <Route 
             exact
-            path="/" 
+            path={process.env.PUBLIC_URL + '/'} 
             render={props => <ListView {...props} colors={this.state.useColors} />}
           />
           <Route 
-            path="/listView/:color" 
+            path={process.env.PUBLIC_URL + '/listView/:color'} 
             render={props => <ListView {...props} colors={this.state.useColors} />}
           />
-          <Route path="/detailView/:hexColor" component={DetailView} />
+          <Route path={process.env.PUBLIC_URL + '/detailView/:hexColor'} component={DetailView} />
         </Switch>
       </div>
     );
