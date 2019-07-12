@@ -1,6 +1,6 @@
-## color-chooser
+# color-chooser
 
-A color chooser app written as a design assessment exercise for New Engen.
+A color chooser app written as a design assessment exercise.
 
 ## To do
 

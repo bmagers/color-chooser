@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-import Header from './header';
+// import Header from './header';
 import Sidebar from './sidebar';
 import ListView from './listView';
 import DetailView from './detailView';
@@ -54,7 +54,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Header />
+        {/* <Header /> */}
         <div className="headerExtended" />
         <Sidebar handleClick={this.handleClick} />
         <Switch>
